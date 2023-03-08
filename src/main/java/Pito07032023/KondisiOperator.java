@@ -17,6 +17,6 @@ public class KondisiOperator {
         status = (grade >= 60)?"passed":"Fail";
         
         //print status
-        System.out.println(status);
+        System.out.println("Status : "+status);
     }
 }
