@@ -13,7 +13,7 @@ public class TestPassByValue {
         int i = 10;//mencetak nilai i
         System.out.println(i);
         
-        test(j);
+        test(i);
         System.out.println(i);
     }
     public static void test(int j){
