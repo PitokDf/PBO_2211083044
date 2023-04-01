@@ -16,11 +16,7 @@ public class AritmatikaTest {
         System.out.println("Hasil Penambahan : "+Aritmatika.tambah(a, b));
         System.out.println("Bilangan Genap : "+Aritmatika.cekGanjil(a));
         System.out.print("Bilangan Ganjil : ");
-        int [] arr = Aritmatika.ganjil(Aritmatika.tambah(a, b));
-        for (int i =0; i<arr.length;i++){
-            System.out.print(arr[i]+" ");
-            
-        }
+       
         System.out.println(" ");
         System.out.print("Bilangan Prima : ");
         int [] asd = Aritmatika.hg(Aritmatika.tambah(a, b));
