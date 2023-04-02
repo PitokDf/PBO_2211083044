@@ -14,7 +14,7 @@ public class StudentRecord {
     public StudentRecord(){ 
         //area inisialisasi kode; 
         } 
-            public StudentRecord(String temp){ 
+        public StudentRecord(String temp){ 
             this.name = temp;
             StudentCount++;
         } 

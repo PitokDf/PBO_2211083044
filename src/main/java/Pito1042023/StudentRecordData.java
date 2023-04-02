@@ -10,6 +10,7 @@ public class StudentRecordData {
         dataSiswa[0]=d1;
 
         System.out.println(dataSiswa[0].getName());
+        System.out.println(dataSiswa[0].getAddres());
         
         d1.setName("");
         d1.setAddres("");
@@ -17,5 +18,6 @@ public class StudentRecordData {
         dataSiswa[0]=d1;
 
         System.out.println(dataSiswa[0].getName());
+        
     }
 }
