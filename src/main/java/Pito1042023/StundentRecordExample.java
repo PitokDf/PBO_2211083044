@@ -5,11 +5,15 @@ public class StundentRecordExample {
         StudentRecord yanto = new StudentRecord();
         StudentRecord yanti = new StudentRecord();
         StudentRecord ali = new StudentRecord("ali");
+        
 
         yanto.setName("Yanto");
         yanto.setAddres("palembang");
         yanto.setAge(18);
-        yanto.setEnglishGrade(90);
+        yanto.setEnglishGrade(90.0);
+        yanto.setMathgrade(90.0);
+        yanto.setscienceGrade(90);
+
 
         yanti.setName("Yanti");
         yanti.setAddres("Jakarta");
@@ -29,7 +33,8 @@ public class StundentRecordExample {
 
         System.out.println("data object ali");
         ali.print("");
-
+        yanto.NilaiHuruf(0);
         
+        System.out.println("JUmlah data: "+StudentRecord.gst());
     }
 }

@@ -7,11 +7,8 @@ public class EntryBukuAlamat {
     private String alamatEmail;
     
     // Constructor
-    public EntryBukuAlamat(String nama, String alamat, String nomorTelepon, String alamatEmail) {
-        this.nama = nama;
-        this.alamat = alamat;
-        this.nomorTelepon = nomorTelepon;
-        this.alamatEmail = alamatEmail;
+    public EntryBukuAlamat() {
+        //inisialisai kode
     }
     
     // Accessor

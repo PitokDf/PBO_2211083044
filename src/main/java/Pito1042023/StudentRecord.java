@@ -10,9 +10,12 @@ public class StudentRecord {
     private double average;
 
     private static int StudentCount;//class variable
+    public static int gst(){
+        return StudentCount;
+    }
 
     public StudentRecord(){ 
-        //area inisialisasi kode; 
+        StudentCount++; 
         } 
         public StudentRecord(String temp){ 
             this.name = temp;
@@ -58,7 +61,7 @@ public class StudentRecord {
         return mathGrade;
     }
 
-    public void setnMathgrade(Double mathGrade){
+    public void setMathgrade(Double mathGrade){
         this.mathGrade = mathGrade;
     }
 
@@ -82,9 +85,8 @@ public class StudentRecord {
         return average;
     }
 
-    public void setaverage(double average){
-        double rata = (mathGrade+englishGrade+scienceGrade)/3;
-        this.average = average;
+    public double setaverage(double mathGrade,double englishGrade,double scienceGrade){
+        return (mathGrade+englishGrade+scienceGrade)/3;
     }
 
     public int getStudentCount(){
@@ -104,6 +106,21 @@ public class StudentRecord {
         System.out.println("Name          : " + name); 
         System.out.println("Math Grade    : " + mGrade); 
         System.out.println("English Grade : " + eGrade); 
-        System.out.println("Science Grade : " + sGrade); 
+        System.out.println("Science Grade : " + sGrade);
+    }
+    public void NilaiHuruf(double average){
+        if (average>80){
+            System.out.println("A");
+        }else if(average>65){
+            System.out.println("B");
+        }else if (average>55){
+            System.out.println("C");
+        }else if (average>40){
+            System.out.println("D");
+        }else if (average>0){
+            System.out.println("E");
+        }else{
+            System.out.println(" ");
+        }
     }
 }

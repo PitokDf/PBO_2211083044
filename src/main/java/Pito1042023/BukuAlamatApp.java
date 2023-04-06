@@ -3,13 +3,17 @@ package Pito1042023;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.xml.crypto.Data;
+
 public class BukuAlamatApp {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        ArrayList<EntryBukuAlamat> bukuAlamatList = new ArrayList<>();
+        EntryBukuAlamat tempik;
+        EntryBukuAlamat[] saya = new EntryBukuAlamat[100];
         
         boolean berjalan = true;
         while (berjalan) {
+            tempik = new EntryBukuAlamat();
             System.out.println("=======================");
             System.out.println("          Menu         ");
             System.out.println("=======================");
@@ -24,10 +28,9 @@ public class BukuAlamatApp {
             int pilihan = in.nextInt();
             in.nextLine();
             System.out.println("\n");
-            
+            int i =0;
             switch (pilihan) {
                 case 1:
-                    if (bukuAlamatList.size() < 100) {
                         System.out.print("Masukkan Nama          : ");
                         String nama = in.nextLine();
 
@@ -40,91 +43,70 @@ public class BukuAlamatApp {
                         System.out.print("Masukkan Alamat Email  : ");
                         String alamatEmail = in.nextLine();
                         
-                        EntryBukuAlamat bukuAlamat = new EntryBukuAlamat(nama, alamat, nomorTelepon, alamatEmail);
-                        bukuAlamatList.add(bukuAlamat);
+                        tempik.setNama(nama);tempik.setAlamat(alamat);tempik.setNomorTelepon(nomorTelepon);tempik.setAlamatEmail(alamatEmail);
+                        saya[i++]= tempik;
                         System.out.println("Data berhasil ditambahkan :-)");
                         System.out.println("\n");
-                    } else {
-                        System.out.println("-------------------------------------------");
-                        System.out.println("Data Telah Penuh X ");
-                        System.out.println("-------------------------------------------");
-                    }
                     break;
                 case 2:
                     System.out.print("nomor data yang ingin dihapus : ");
                     int nomorDataHapus = in.nextInt();
                     in.nextLine();
-                    if (nomorDataHapus < 1 || nomorDataHapus > bukuAlamatList.size()) {
-                        System.out.println("-------------------------------------------");
-                        System.out.println("Nomor data tidak valid");
-                        System.out.println("-------------------------------------------");
-                        System.out.println("");
-                    } else {
-                        bukuAlamatList.remove(nomorDataHapus-1);
-                        System.out.println("-------------------------------------------");
-                        System.out.println("Data berhasil dihapus :-)");
-                        System.out.println("-------------------------------------------");
-                        System.out.println("");
-                    }
+                    tempik.setNama("");tempik.setAlamat("");tempik.setNomorTelepon("");tempik.setAlamatEmail("");
+                    saya[i]= tempik;
+                    System.out.println("Data berhasil ditambahkan :-)");
+                    System.out.println("\n");
                     break;
                 case 3:
-                    if (bukuAlamatList.isEmpty()) {
+                    if (i < 0 ) {
                         System.out.println("-------------------------------------------");
                         System.out.println("Tidak ada data");
                         System.out.println("-------------------------------------------");
                     } else {
                         System.out.println("Data BukuAlamat : ");
-                        for (int i = 0; i < bukuAlamatList.size(); i++) {
-                            EntryBukuAlamat bukuAlamat = bukuAlamatList.get(i);
+                        for (int j = 0; j <= i; j++){
+                            
                             System.out.println("");
-                            System.out.println("Data ke-" + (i+1));
+                            System.out.println("Data ke-" + (j+1));
                             System.out.println("-------------------------------------------");
-                            System.out.println("Nama          : " + bukuAlamat.getNama());
-                            System.out.println("Alamat        : " + bukuAlamat.getAlamat());
-                            System.out.println("Nomor Telepon : " + bukuAlamat.getNomorTelepon());
-                            System.out.println("Alamat Email  : " + bukuAlamat.getAlamatEmail());
+                            System.out.println("Nama          : " + saya[j].getNama());
+                            System.out.println("Alamat        : " + saya[j].getAlamat());
+                            System.out.println("Nomor Telepon : " + saya[j].getNomorTelepon());
+                            System.out.println("Alamat Email  : " + saya[j].getAlamatEmail());
                             System.out.println("-------------------------------------------");
                             System.out.println("");
                         }
                     }
                     break;
                 case 4:
-                    System.out.print("Masukkan nomor data yang ingin diUpdate : ");
-                    int nomorDataPerbarui = in.nextInt();
-                    in.nextLine();
-                    if (nomorDataPerbarui < 1 || nomorDataPerbarui > bukuAlamatList.size()) {
-                        System.out.println("-------------------------------------------");
-                        System.out.println("Nomor data tidak valid");
-                        System.out.println("-------------------------------------------");
-                        System.out.println("\n");
-                    } else {
-                        System.out.print("Update Nama          : ");
-                        String namaPerbarui = in.nextLine();
+                
+                System.out.println("Masukkan index data yang ingin diedit : ");int k = in.nextInt();
+                in.nextLine();
+                System.out.print("Masukkan Nama          : ");
+                nama = in.nextLine();
 
-                        System.out.print("Update Alamat        : ");
-                        String alamatPerbarui = in.nextLine();
+                System.out.print("Masukkan Alamat        : ");
+                alamat = in.nextLine();
 
-                        System.out.print("Update Nomor Telepon : ");
-                        String nomorTeleponPerbarui = in.nextLine();
+                System.out.print("Masukkan Nomor Telepon : ");
+                nomorTelepon = in.nextLine();
 
-                        System.out.print("Update Alamat Email  : ");
-                        String alamatEmailPerbarui = in.nextLine();
-                        System.out.println("");
-                        EntryBukuAlamat bukuAlamatPerbarui = new EntryBukuAlamat(namaPerbarui, alamatPerbarui, nomorTeleponPerbarui, alamatEmailPerbarui);
-                        bukuAlamatList.set(nomorDataPerbarui-1, bukuAlamatPerbarui);
-                        System.out.println("-------------------------------------------");
-                        System.out.println("Data berhasil diperbarui");
-                        System.out.println("-------------------------------------------");
-                        System.out.println("\n");
-                    }
+                System.out.print("Masukkan Alamat Email  : ");
+                alamatEmail = in.nextLine();
+                
+                tempik.setNama(nama);tempik.setAlamat(alamat);tempik.setNomorTelepon(nomorTelepon);tempik.setAlamatEmail(alamatEmail);
+                saya[k]= tempik;
+                System.out.println("Data berhasil ditambahkan :-)");
+                System.out.println("\n");
                     break;
                 case 5:
                     System.out.println("-------------------------------------------");
-                    System.out.println(" Jumlah buku Alamat : " + bukuAlamatList.size());
+                    System.out.println(" Jumlah buku Alamat : " + i);
                     System.out.println("-------------------------------------------\n");
                     break;
                 case 6:
                     berjalan = false;
+                    System.out.println("Sayonara\n");
                     break;
                 default:
                     System.out.println("-------------------------------------------");
