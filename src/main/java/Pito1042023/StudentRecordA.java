@@ -1,7 +1,7 @@
 package Pito1042023;
 
 public class StudentRecordA {
-    private String Nama;
+    protected String Nama;
     private String Address;
     private String Age;
     private int NilaiMTK;

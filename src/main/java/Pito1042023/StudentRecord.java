@@ -7,7 +7,7 @@ public class StudentRecord {
     private double mathGrade;
     private double englishGrade;
     private double scienceGrade;
-    private double average;
+    protected double average;
 
     private static int StudentCount;//class variable
     public static int gst(){

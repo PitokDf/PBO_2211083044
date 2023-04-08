@@ -11,9 +11,9 @@ package Pito16032023;
 import javax.swing.JOptionPane;
 public class ContohJOptionPane {
    public static void main(String[] args){
-       int nm;
+       String nm;
        nm = JOptionPane.showInputDialog("Please enter your name");
-       String msg = ("Hello "+ nm+" ");
+       String msg = ("Hello "+ nm+"!!");
        JOptionPane.showMessageDialog(null, msg);
    } 
 }
