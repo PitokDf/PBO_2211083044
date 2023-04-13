@@ -19,7 +19,7 @@ public class Circle extends Shapes{
         return radius;
     }
     public static void main(String[] args){
-        Circle c = new Circle(0);
+        Circle c = new Circle(1);
         System.out.println(c.getname()+"\nArea : "+c.getArea()+"\nRadius : "+c.getRadius());
     }
 }

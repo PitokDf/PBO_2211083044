@@ -19,7 +19,7 @@ public class Square extends Shapes{
         return side;
     }
     public static void main(String[] args) {
-        Square s =new Square(0);
+        Square s =new Square(3);
         System.out.println(s.getname()+"\nArea : "+s.getArea()+"\nSisi : "+s.getSide());
     }
 }
