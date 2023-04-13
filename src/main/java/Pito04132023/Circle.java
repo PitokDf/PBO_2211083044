@@ -8,6 +8,8 @@ package Pito04132023;
  *
  * @author Pitok
  */
+
+import java.util.*;
 public class Circle implements Relation{
     private Double Jari;
     public Circle(double Jari){ 
@@ -37,8 +39,11 @@ public class Circle implements Relation{
         return (aLen == bLen); 
     }
     public static void main(String[] args){
-        Relation ling = new Circle(5);
-        Relation ling2 = new Circle(3);
+        Scanner in = new Scanner(System.in);
+        System.out.print("Masukkan Jari-Jari Lingkaran 1 : ");int L1 = in.nextInt();
+        System.out.print("Masukkan Jari-Jari Lingkaran 2 : ");int L2 = in.nextInt();
+        Relation ling = new Circle(L1);
+        Relation ling2 = new Circle(L2);
 
         System.out.println(ling.isEqual(ling, ling2));
     }
