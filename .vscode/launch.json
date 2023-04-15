@@ -1,0 +1,406 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "FormAnggota",
+            "request": "launch",
+            "mainClass": "Pito04152023.view.FormAnggota",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Circle",
+            "request": "launch",
+            "mainClass": "Pito04132023.Circle",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "HitungPanjangTitik",
+            "request": "launch",
+            "mainClass": "Pito04132023.HitungPanjangTitik",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "InterfaceExample",
+            "request": "launch",
+            "mainClass": "Pito04132023.InterfaceExample",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Line",
+            "request": "launch",
+            "mainClass": "Pito04132023.Line",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "KondisiOperator",
+            "request": "launch",
+            "mainClass": "Pito07032023.KondisiOperator",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan1",
+            "request": "launch",
+            "mainClass": "Pito07032023.Latihan1",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan2",
+            "request": "launch",
+            "mainClass": "Pito07032023.Latihan2",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan3",
+            "request": "launch",
+            "mainClass": "Pito07032023.Latihan3",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "TestAND",
+            "request": "launch",
+            "mainClass": "Pito07032023.TestAND",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "TestXOR",
+            "request": "launch",
+            "mainClass": "Pito07032023.TestXOR",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "GetInputFromKeyboard",
+            "request": "launch",
+            "mainClass": "Pito08032023.GetInputFromKeyboard",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "GetInputFromKeyboardSwim",
+            "request": "launch",
+            "mainClass": "Pito08032023.GetInputFromKeyboardSwim",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "BukuAlamatApp",
+            "request": "launch",
+            "mainClass": "Pito1042023.BukuAlamatApp",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "BukuAlamatjOption",
+            "request": "launch",
+            "mainClass": "Pito1042023.BukuAlamatjOption",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "StudentRecordB",
+            "request": "launch",
+            "mainClass": "Pito1042023.StudentRecordB",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "StudentRecordData",
+            "request": "launch",
+            "mainClass": "Pito1042023.StudentRecordData",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "StundentRecordExample",
+            "request": "launch",
+            "mainClass": "Pito1042023.StundentRecordExample",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "ContohJOptionPane",
+            "request": "launch",
+            "mainClass": "Pito16032023.ContohJOptionPane",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "InputBuffer",
+            "request": "launch",
+            "mainClass": "Pito16032023.InputBuffer",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "JanganDiRunOk",
+            "request": "launch",
+            "mainClass": "Pito16032023.JanganDiRunOk",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan1Buffer",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan1Buffer",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan1JOPtionPane",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan1JOPtionPane",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan2Buffer",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan2Buffer",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan2JOptionPane",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan2JOptionPane",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan3Buffer",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan3Buffer",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan3JOptionPane",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan3JOptionPane",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan611",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan611",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan611JOptionPane",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan611JOptionPane",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan612",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan612",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan621",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan621",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan622",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan622",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan631",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan631",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan632",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan632",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan633",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan633",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan641",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan641",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan642",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan642",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan643",
+            "request": "launch",
+            "mainClass": "Pito16032023.Latihan643",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan771",
+            "request": "launch",
+            "mainClass": "Pito18032023.Latihan771",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan771WhileLoop",
+            "request": "launch",
+            "mainClass": "Pito18032023.Latihan771WhileLoop",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Latihan772",
+            "request": "launch",
+            "mainClass": "Pito18032023.Latihan772",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "SampleFrame",
+            "request": "launch",
+            "mainClass": "Pito18032023.SampleFrame",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "AritmatikaTest",
+            "request": "launch",
+            "mainClass": "Pito3032023.AritmatikaTest",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "CastingExplisit",
+            "request": "launch",
+            "mainClass": "Pito3032023.CastingExplisit",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "EqualTest",
+            "request": "launch",
+            "mainClass": "Pito3032023.EqualTest",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "TestPassByReference",
+            "request": "launch",
+            "mainClass": "Pito3032023.TestPassByReference",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "TestPassByValue",
+            "request": "launch",
+            "mainClass": "Pito3032023.TestPassByValue",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Circle(1)",
+            "request": "launch",
+            "mainClass": "Pito4082023.Circle",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Earth",
+            "request": "launch",
+            "mainClass": "Pito4082023.Earth",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Kuda",
+            "request": "launch",
+            "mainClass": "Pito4082023.Kuda",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Manusia",
+            "request": "launch",
+            "mainClass": "Pito4082023.Manusia",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Mars",
+            "request": "launch",
+            "mainClass": "Pito4082023.Mars",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "PolimorfisExample",
+            "request": "launch",
+            "mainClass": "Pito4082023.PolimorfisExample",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Square",
+            "request": "launch",
+            "mainClass": "Pito4082023.Square",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "Student",
+            "request": "launch",
+            "mainClass": "Pito4082023.Student",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "StudentRecordE",
+            "request": "launch",
+            "mainClass": "Pito4082023.StudentRecordE",
+            "projectName": "PBO_2211083044"
+        }
+    ]
+}

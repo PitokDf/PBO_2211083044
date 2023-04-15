@@ -21,7 +21,7 @@ public class BukuAlamatjOption {
                         String nomorTelepon = JOptionPane.showInputDialog("Masukkan Nomor Telepon : ");
                         String alamatEmail = JOptionPane.showInputDialog("Masukkan Alamat Email : ");
 
-                        EntryBukuAlamat bukuAlamat = new EntryBukuAlamat(nama, alamat, nomorTelepon, alamatEmail);
+                        EntryBukuAlamat bukuAlamat =  EntryBukuAlamat(nama, alamat, nomorTelepon, alamatEmail);
                         bukuAlamatList.add(bukuAlamat);
                         JOptionPane.showMessageDialog(null,"Data Berhasil Ditambahkan :-)");
                         System.out.println("\n");
