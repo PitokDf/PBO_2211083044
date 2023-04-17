@@ -8,8 +8,10 @@ package Pito04152023.controller;
  *
  * @author Pitok
  */
-import Pito04152023.view.*;
-import Pito04152023.Model.*;
+import Pito04152023.view.FormAnggota;
+import Pito04152023.Model.AnggotaDao;
+import Pito04152023.Model.Anggota;
+import Pito04152023.Model.AnggotaDaoImpl;
 import javax.swing.table.DefaultTableModel;
 public class AnggotaController {
     private FormAnggota formAnggota;

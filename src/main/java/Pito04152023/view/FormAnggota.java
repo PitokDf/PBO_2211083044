@@ -84,7 +84,7 @@ public class FormAnggota extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtAlamat);
-        txtAlamat.setBounds(80, 70, 290, 22);
+        txtAlamat.setBounds(80, 70, 290, 30);
 
         txtNobp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,7 +92,7 @@ public class FormAnggota extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtNobp);
-        txtNobp.setBounds(80, 10, 290, 22);
+        txtNobp.setBounds(80, 10, 290, 30);
 
         jLabel3.setText("Nama :");
         getContentPane().add(jLabel3);
@@ -102,13 +102,18 @@ public class FormAnggota extends javax.swing.JFrame {
         getContentPane().add(btnCancel);
         btnCancel.setBounds(290, 110, 72, 23);
 
+        txtNama.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtNamaMouseEntered(evt);
+            }
+        });
         txtNama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNamaActionPerformed(evt);
             }
         });
         getContentPane().add(txtNama);
-        txtNama.setBounds(80, 40, 290, 22);
+        txtNama.setBounds(80, 40, 290, 30);
 
         btnInsert.setText("Insert");
         btnInsert.addActionListener(new java.awt.event.ActionListener() {
@@ -196,6 +201,10 @@ controller.bersihForm();// TODO add your handling code here:
     private void tblAnggotaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblAnggotaMouseClicked
 controller.getAnggota();        // TODO add your handling code here:
     }//GEN-LAST:event_tblAnggotaMouseClicked
+
+    private void txtNamaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNamaMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNamaMouseEntered
 
     /**
      * @param args the command line arguments
