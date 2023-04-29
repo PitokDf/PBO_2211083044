@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FormPeminjaman",
+            "request": "launch",
+            "mainClass": "Pito04152023.view.FormPeminjaman",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
             "name": "FormBuku",
             "request": "launch",
             "mainClass": "Pito04152023.view.FormBuku",

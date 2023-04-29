@@ -99,6 +99,11 @@ public class FormAnggota extends javax.swing.JFrame {
         jLabel3.setBounds(20, 40, 50, 16);
 
         btnCancel.setText("Cancel");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnCancel);
         btnCancel.setBounds(290, 110, 72, 23);
 
@@ -205,6 +210,11 @@ controller.getAnggota();        // TODO add your handling code here:
     private void txtNamaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNamaMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNamaMouseEntered
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        // TODO add your handling code here:
+        FormBuku.main(null);
+    }//GEN-LAST:event_btnCancelActionPerformed
 
     /**
      * @param args the command line arguments
