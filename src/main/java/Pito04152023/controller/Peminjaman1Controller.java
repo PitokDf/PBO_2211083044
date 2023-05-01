@@ -1,19 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Pito04152023.controller;
 
-import Pito04152023.view.FormPeminjaman1;
-import Pito04152023.Model.*;
-import javax.swing.table.DefaultTableModel;
-import java.util.*;
+import java.util.List;
 
-/**
- *
- * @author Pitok
- */
-public class PeminjamanController {
+import javax.swing.table.DefaultTableModel;
+
+import Pito04152023.Model.*;
+import Pito04152023.view.FormPeminjaman1;
+
+public class Peminjaman1Controller {
     private Peminjaman1 peminjaman;
     private Peminjaman1DaoImpl peminjamanDao;
     private FormPeminjaman1 form;
@@ -21,7 +15,7 @@ public class PeminjamanController {
     private AnggotaDao anggotaDao;
     private BukuinDao bukuDao;
 
-    public PeminjamanController(FormPeminjaman1 form) {
+    public Peminjaman1Controller(FormPeminjaman1 form) {
         this.form = form;
         peminjamanDao = new Peminjaman1DaoImpl();
         anggotaDao = new AnggotaDaoImpl();
@@ -87,7 +81,7 @@ public class PeminjamanController {
     public void tampilData() {
         DefaultTableModel tabelModel = (DefaultTableModel) form.getTblPeminjaman().getModel();
         tabelModel.setRowCount(0);
-        java.util.List<Peminjaman1> list = peminjamanDao.getAll();
+        List<Peminjaman1> list = peminjamanDao.getAll();
         for (Peminjaman1 peminjaman : list) {
             Object[] data = {
                     peminjaman.getAnggota().getNobp(),
