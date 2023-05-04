@@ -12,4 +12,11 @@
         <exec.mainClass>com.mycompany.pbo_2211083044.PBO_2211083044</exec.mainClass>
     </properties>
     <name>test</name>
+    <dependencies>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE160</version>
+        </dependency>
+    </dependencies>
 </project>

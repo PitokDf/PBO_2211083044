@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FormPengembalian",
+            "request": "launch",
+            "mainClass": "Pito04152023.view.FormPengembalian",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "DaysTest",
+            "request": "launch",
+            "mainClass": "Pito04152023.Model.DaysTest",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
             "name": "FormPeminjaman1",
             "request": "launch",
             "mainClass": "Pito04152023.view.FormPeminjaman1",

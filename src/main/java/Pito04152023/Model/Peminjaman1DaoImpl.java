@@ -10,8 +10,8 @@ public class Peminjaman1DaoImpl implements Peminjaman1Dao {
         AnggotaDao daoAnggota = new AnggotaDaoImpl();
         BukuinDao bukuDao = new BukuinDaoImpl();
 
-        data.add(new Peminjaman1(daoAnggota.getAnggota(0), bukuDao.getBukuin(0), "04/29/2023", "04/29/2024"));
-        data.add(new Peminjaman1(daoAnggota.getAnggota(1), bukuDao.getBukuin(0), "03/29/2023", "03/29/2024"));
+        data.add(new Peminjaman1(daoAnggota.getAnggota(0), bukuDao.getBukuin(0), "04/04/2023", "04/05/2024"));
+        data.add(new Peminjaman1(daoAnggota.getAnggota(1), bukuDao.getBukuin(1), "03/05/2023", "03/05/2024"));
     }
 
     public void save(Peminjaman1 peminjaman) {

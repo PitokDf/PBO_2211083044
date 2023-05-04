@@ -106,6 +106,10 @@ public class BukuAlamatjOption {
             }*/
         }
     }
+    private static EntryBukuAlamat EntryBukuAlamat(String nama, String alamat, String nomorTelepon,
+            String alamatEmail) {
+        return null;
+    }
     public static void Menu(){
         Scanner in = new Scanner(System.in);
         System.out.println("=======================");

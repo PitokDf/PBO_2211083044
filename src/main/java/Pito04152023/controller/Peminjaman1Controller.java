@@ -1,5 +1,6 @@
 package Pito04152023.controller;
 
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import javax.swing.table.DefaultTableModel;
@@ -20,6 +21,9 @@ public class Peminjaman1Controller {
         peminjamanDao = new Peminjaman1DaoImpl();
         anggotaDao = new AnggotaDaoImpl();
         bukuDao = new BukuinDaoImpl();
+    }
+
+    public Peminjaman1Controller() {
     }
 
     public void cls() {
@@ -58,8 +62,11 @@ public class Peminjaman1Controller {
         if (peminjaman != null) {
             form.getCboAnggota().setSelectedItem(peminjaman.getAnggota().getNobp());
             form.getCboBuku().setSelectedItem(peminjaman.getBukuin().getKode());
-            form.getTxtTglpinjam().setText(peminjaman.getTglpinjam());
-            form.getTxtTglkembali().setText(peminjaman.getTglkembali());
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            String tglString = formatter.format(peminjaman.getTglpinjam());
+            form.getTxtTglpinjam().setText(tglString);
+            String tglStringk = formatter.format(peminjaman.getTglkembali());
+            form.getTxtTglkembali().setText(tglStringk);
         }
     }
 

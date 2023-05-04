@@ -1,10 +1,15 @@
 package Pito04152023.Model;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class Peminjaman1 {
     private Anggota anggota;
     private Bukuin bukuin;
     private String tglpinjam;
     private String tglkembali;
+    LocalDate tglp;
+    LocalDate tglk;
 
     public Peminjaman1() {
     }
@@ -40,11 +45,15 @@ public class Peminjaman1 {
         return bukuin;
     }
 
-    public String getTglpinjam() {
-        return tglpinjam;
+    public LocalDate getTglpinjam() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        tglp = LocalDate.parse(tglpinjam, formatter);
+        return tglp;
     }
 
-    public String getTglkembali() {
-        return tglkembali;
+    public LocalDate getTglkembali() {
+        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        tglk = LocalDate.parse(tglkembali, formatter1);
+        return tglk;
     }
 }
