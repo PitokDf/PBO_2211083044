@@ -213,7 +213,7 @@ controller.getAnggota();        // TODO add your handling code here:
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
-        FormBuku.main(null);
+        controller.bersihForm();
     }//GEN-LAST:event_btnCancelActionPerformed
 
     /**
