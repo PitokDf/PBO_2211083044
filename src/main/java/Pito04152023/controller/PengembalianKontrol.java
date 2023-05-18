@@ -52,7 +52,6 @@ public class PengembalianKontrol {
         pengembalian = new Pengembalian();
         pengembalian.setAnggota(anggotaDao.getAnggota(form.getCboAnggota().getSelectedIndex()));
         pengembalian.setBukuin(bukuDao.getBukuin(form.getCboBuku().getSelectedIndex()));
-        pengembalian.setPeminjaman(peminjamanDao.get);
         pengembalian.setTglkembali(form.getTxtTglKembali().getText());
 
     }
