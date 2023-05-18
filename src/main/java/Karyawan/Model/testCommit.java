@@ -4,7 +4,7 @@ public class testCommit {
     public static void main(String[] args) {
         System.out.println("hello dunia, apa kabar");
         System.out.println("test ke-2 Commit");
-        int a = 100;
+        int a = 10;
         System.out.println();
         rekur(a);
 
