@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DatabaseExample",
+            "request": "launch",
+            "mainClass": "DatabaseExample",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "ClientServer",
+            "request": "launch",
+            "mainClass": "ClientServer",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "FormGajiKaryawan",
+            "request": "launch",
+            "mainClass": "Karyawan.View.FormGajiKaryawan",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
             "name": "testCommit",
             "request": "launch",
             "mainClass": "Karyawan.Model.testCommit",
