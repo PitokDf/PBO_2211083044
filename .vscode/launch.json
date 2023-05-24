@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "formGaji",
+            "request": "launch",
+            "mainClass": "Karyawan.View.formGaji",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "FormKaryawan",
+            "request": "launch",
+            "mainClass": "Karyawan.View.FormKaryawan",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
             "name": "DatabaseExample",
             "request": "launch",
             "mainClass": "DatabaseExample",

@@ -3,27 +3,36 @@ package Karyawan.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GajiDaoImpl implements GajiDao{
+public class GajiDaoImpl implements GajiDao {
     List<Gaji> data = new ArrayList<>();
 
-    public GajiDaoImpl(){
+    public GajiDaoImpl() {
         KaryawanDao karyawanDao = new KaryawanDaoImpl();
-       
-        data.add(new Gaji(0, 0, karyawanDao.getKaryawan(0), 0, 0, 0, 0));
+        Gaji gaji = new Gaji();
+
+        data.add(new Gaji(karyawanDao.getKaryawan(0), 3, 2023, gaji.getGajiPokok(), gaji.getTunjanganAnak(),
+                gaji.getTunjanganIstri(), gaji.getTotalGaji()));
+        data.add(new Gaji(karyawanDao.getKaryawan(1), 3, 2023, gaji.getGajiPokok(), gaji.getTunjanganAnak(),
+                gaji.getTunjanganIstri(), gaji.getTotalGaji()));
     }
-    public void save(Gaji gaji){
+
+    public void save(Gaji gaji) {
         data.add(gaji);
     }
-    public void update(int index, Gaji gaji){
-        data.set(index, gaji);
+
+    public void update(int idx, Gaji gaji) {
+        data.set(idx, gaji);
     }
-    public void delete (int index){
-        data.remove(index);
+
+    public void delete(int idx) {
+        data.remove(idx);
     }
-    public Gaji getGaji(int index){
-        return data.get(index);
+
+    public Gaji getGaji(int idx) {
+        return data.get(idx);
     }
-    public List<Gaji> getAll(){
+
+    public List<Gaji> getAll() {
         return data;
     }
 }
