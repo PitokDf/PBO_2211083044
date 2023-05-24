@@ -7,9 +7,6 @@ import Karyawan.Kontrol.GajiKontroller;
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-
-
-
 /**
  *
  * @author pitokdf

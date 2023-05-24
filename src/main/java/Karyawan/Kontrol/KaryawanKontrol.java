@@ -1,6 +1,5 @@
 package Karyawan.Kontrol;
 
-
 import java.util.List;
 
 import javax.swing.table.DefaultTableModel;
@@ -9,8 +8,6 @@ import Karyawan.Model.Karyawan;
 import Karyawan.Model.KaryawanDao;
 import Karyawan.Model.KaryawanDaoImpl;
 import Karyawan.View.FormKaryawan;
-
-
 
 public class KaryawanKontrol {
     private FormKaryawan form;
