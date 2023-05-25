@@ -20,7 +20,7 @@ public class KaryawanDaoImpl implements KaryawanDao {
     }
 
     public void delete(int index) {
-        data.remove(data);
+        data.remove(index);
     }
 
     public Karyawan getKaryawan(int index) {

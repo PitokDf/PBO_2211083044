@@ -10,10 +10,8 @@ public class GajiDaoImpl implements GajiDao {
         KaryawanDao karyawanDao = new KaryawanDaoImpl();
         Gaji gaji = new Gaji();
 
-        data.add(new Gaji(karyawanDao.getKaryawan(0), 3, 2023, gaji.getGajiPokok(), gaji.getTunjanganAnak(),
-                gaji.getTunjanganIstri(), gaji.getTotalGaji()));
-        data.add(new Gaji(karyawanDao.getKaryawan(1), 3, 2023, gaji.getGajiPokok(), gaji.getTunjanganAnak(),
-                gaji.getTunjanganIstri(), gaji.getTotalGaji()));
+        data.add(new Gaji(karyawanDao.getKaryawan(0), 3, 2023));
+        data.add(new Gaji(karyawanDao.getKaryawan(1), 3, 2023));
     }
 
     public void save(Gaji gaji) {

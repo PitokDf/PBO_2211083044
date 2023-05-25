@@ -60,11 +60,4 @@ public class Pengembalian {
     public Peminjaman1 getPeminjaman() {
         return peminjaman;
     }
-
-    public void setTglpinjam(String text) {
-        
-    }
-
-    public void setTglkembali(String text) {
-    }
 }

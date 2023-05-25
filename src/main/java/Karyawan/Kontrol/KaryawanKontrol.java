@@ -22,7 +22,9 @@ public class KaryawanKontrol {
     public void cls() {
         form.getTxtNama().setText("");
         form.getTxtAlamat().setText("");
+        form.getCboGolongan().setSelectedIndex(0);
         form.getTxtNIP().setText("");
+        form.getCboStatus().setSelectedIndex(0);
         form.getTxtJabatan().setText("");
         form.getTxtJumlahAnak().setText("");
     }
@@ -89,7 +91,6 @@ public class KaryawanKontrol {
     public void daleteKaryawan() {
         int index = form.geTblKaryawan().getSelectedRow();
         karyawanDao.delete(index);
-
         javax.swing.JOptionPane.showMessageDialog(form, "Delete Ok");
     }
 }

@@ -14,15 +14,14 @@ public class Gaji {
     public Gaji() {
     }
 
-    public Gaji(Karyawan karyawan, int bulan, int tahun, double gajiPokok, double tunjanganAnak, double tunjanganIstri,
-            double totalGaji) {
+    public Gaji(Karyawan karyawan, int bulan, int tahun) {
         this.karyawan = karyawan;
         this.bulan = bulan;
         this.tahun = tahun;
-        this.gajiPokok = gajiPokok;
-        this.tunjanganAnak = tunjanganAnak;
-        this.tunjanganIstri = tunjanganIstri;
-        this.totalGaji = totalGaji;
+        setGajiPokok(karyawan);
+        setTunjanganAnak(karyawan);
+        setTunjanganIstri(karyawan);
+        setTotalGaji();
     }
 
     public Karyawan getKaryawan() {
@@ -45,48 +44,12 @@ public class Gaji {
         this.tahun = tahun;
     }
 
-    public double getGajiPokok() {
-        KaryawanDaoImpl karyawanDao = new KaryawanDaoImpl();
-        int index = 0;
-        Karyawan karyawan = karyawanDao.getKaryawan(index);
-        String golongan = karyawan.getGolongan();
-        if (golongan == "A") {
-            return gajiPokok = 5000000;
-        } else if (golongan == "B") {
-            return gajiPokok = 4000000;
-        } else if (golongan == "C") {
-            return gajiPokok = 3000000;
-        } else if (golongan == "D") {
-            return gajiPokok = 2000000;
-        } else {
-            return gajiPokok = 0;
-        }
-    }
-
     public double getTunjanganAnak() {
-        KaryawanDaoImpl karyawanDao = new KaryawanDaoImpl();
-        int index = 0;
-        Karyawan karyawan = karyawanDao.getKaryawan(index);
-        String Status = karyawan.getStatusNikah();
-        int jumlahAnak = karyawan.getJumlahAnak();
-
-        if (Status == "Single") {
-            return tunjanganAnak = 0;
-        } else {
-            return tunjanganAnak = (0.1 * gajiPokok * jumlahAnak);
-        }
+        return tunjanganAnak;
     }
 
     public double getTunjanganIstri() {
-        KaryawanDaoImpl karyawanDao = new KaryawanDaoImpl();
-        int index = 0;
-        Karyawan karyawan = karyawanDao.getKaryawan(index);
-        String Status = karyawan.getStatusNikah();
-        if (Status == "Single") {
-            return tunjanganIstri = 0;
-        } else {
-            return tunjanganIstri = (0.2 * gajiPokok);
-        }
+        return tunjanganIstri;
     }
 
     public double getTotalGaji() {
@@ -98,20 +61,46 @@ public class Gaji {
         this.karyawan = karyawan;
     }
 
-    public void setGajiPokok(double gajiPokok) {
-        this.gajiPokok = gajiPokok;
+    public void setGajiPokok(Karyawan karyawan) {
+        String golongan = karyawan.getGolongan();
+        if (golongan == "A") {
+            gajiPokok = 5000000;
+        } else if (golongan == "B") {
+            gajiPokok = 4000000;
+        } else if (golongan == "C") {
+            gajiPokok = 3000000;
+        } else if (golongan == "D") {
+            gajiPokok = 2000000;
+        } else {
+            gajiPokok = 0;
+        }
     }
 
-    public void setTunjanganAnak(double tunjanganAnak) {
-        this.tunjanganAnak = tunjanganAnak;
+    public void setTunjanganAnak(Karyawan karyawan) {
+        String Status = karyawan.getStatusNikah();
+        int jumlahAnak = karyawan.getJumlahAnak();
+
+        if (Status == "Single") {
+            tunjanganAnak = 0;
+        } else {
+            tunjanganAnak = (0.1 * gajiPokok * jumlahAnak);
+        }
     }
 
-    public void setTunjanganIstri(double tunjanganIstri) {
-        this.tunjanganIstri = tunjanganIstri;
+    public void setTunjanganIstri(Karyawan karyawan) {
+        String Status = karyawan.getStatusNikah();
+        if (Status == "Single") {
+            tunjanganIstri = 0;
+        } else {
+            tunjanganIstri = (0.2 * gajiPokok);
+        }
     }
 
-    public void setTotalGaji(double totalGaji) {
-        this.totalGaji = totalGaji;
+    public void setTotalGaji() {
+        this.totalGaji = tunjanganAnak + tunjanganIstri + gajiPokok;
     }
 
+    public double getGajiPokok() {
+        return gajiPokok;
+    }
 }
