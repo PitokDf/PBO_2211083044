@@ -15,6 +15,7 @@ public class Warnet {
     private String jamMasuk;
     private String jamKeluar;
     private double tarif;
+    private double totalBayar;
 
     public Warnet() {
     }
@@ -59,18 +60,17 @@ public class Warnet {
     }
 
     public double getTarif() {
-        return 10000 * lama();
+        tarif =10000 * lama();
+        return tarif;
     }
 
     public double getTotalBayar() {
         if (pelanggan.getJenisPelanggan().equals("VIP")) {
-            double tb = getTarif();
-            double tbs = tb - tb * 0.02;
-            return tbs;
+            totalBayar = tarif - tarif * 0.02;
+            return totalBayar;
         }
-        double tb = getTarif();
-        double tbs = tb - tb * 0.05;
-        return tbs;
+        totalBayar = tarif - tarif * 0.05;
+            return totalBayar;
     }
 
     public double lama() {
