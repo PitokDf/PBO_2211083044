@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.swing.table.DefaultTableModel;
 
-import Karyawan.View.formGaji;
 import UTS_A.Model.Pelanggan;
 import UTS_A.Model.PelangganDao;
 import UTS_A.Model.PelangganDaoImpl;

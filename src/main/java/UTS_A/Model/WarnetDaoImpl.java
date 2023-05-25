@@ -9,7 +9,8 @@ public class WarnetDaoImpl implements WarnetDao {
     public WarnetDaoImpl() {
         PelangganDao pelangganDao = new PelangganDaoImpl();
         Warnet warnet = new Warnet();
-        data.add(new Warnet(pelangganDao.getPelanggan(0), "25/05/2023", "12:00", "12:59", warnet.getTarif()));
+        data.add(new Warnet(pelangganDao.getPelanggan(0), "25/05/2023", "12:00", "12:59"));
+        data.add(new Warnet(pelangganDao.getPelanggan(1), "25/05/2023", "12:59", "13:59"));
     }
 
     public void save(Warnet warnet) {

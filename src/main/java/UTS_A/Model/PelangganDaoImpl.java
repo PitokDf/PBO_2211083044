@@ -10,6 +10,7 @@ public class PelangganDaoImpl implements PelangganDao {
 
     public PelangganDaoImpl() {
         data.add(new Pelanggan("1111", "Dimas", "VIP"));
+        data.add(new Pelanggan("1112", "Aqil", "GOLD"));
     }
 
     public void save(Pelanggan pelanggan) {

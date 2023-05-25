@@ -18,9 +18,6 @@ public class Gaji {
         this.karyawan = karyawan;
         this.bulan = bulan;
         this.tahun = tahun;
-        setGajiPokok(karyawan);
-        setTunjanganAnak(karyawan);
-        setTunjanganIstri(karyawan);
         setTotalGaji();
     }
 
@@ -45,10 +42,20 @@ public class Gaji {
     }
 
     public double getTunjanganAnak() {
+        if (karyawan.getStatusNikah().equals("Single")) {
+            tunjanganAnak = 0;
+        } else {
+            tunjanganAnak = (0.2 * gajiPokok * karyawan.getJumlahAnak());
+        }
         return tunjanganAnak;
     }
 
     public double getTunjanganIstri() {
+        if (karyawan.getStatusNikah().equals("Single")) {
+            tunjanganIstri = 0;
+        } else {
+            tunjanganIstri = (0.2 * gajiPokok);
+        }
         return tunjanganIstri;
     }
 
@@ -61,46 +68,38 @@ public class Gaji {
         this.karyawan = karyawan;
     }
 
-    public void setGajiPokok(Karyawan karyawan) {
-        String golongan = karyawan.getGolongan();
-        if (golongan == "A") {
-            gajiPokok = 5000000;
-        } else if (golongan == "B") {
-            gajiPokok = 4000000;
-        } else if (golongan == "C") {
-            gajiPokok = 3000000;
-        } else if (golongan == "D") {
-            gajiPokok = 2000000;
-        } else {
-            gajiPokok = 0;
-        }
-    }
-
-    public void setTunjanganAnak(Karyawan karyawan) {
-        String Status = karyawan.getStatusNikah();
-        int jumlahAnak = karyawan.getJumlahAnak();
-
-        if (Status == "Single") {
-            tunjanganAnak = 0;
-        } else {
-            tunjanganAnak = (0.1 * gajiPokok * jumlahAnak);
-        }
-    }
-
-    public void setTunjanganIstri(Karyawan karyawan) {
-        String Status = karyawan.getStatusNikah();
-        if (Status == "Single") {
-            tunjanganIstri = 0;
-        } else {
-            tunjanganIstri = (0.2 * gajiPokok);
-        }
-    }
-
     public void setTotalGaji() {
         this.totalGaji = tunjanganAnak + tunjanganIstri + gajiPokok;
     }
 
     public double getGajiPokok() {
+        if (karyawan.getGolongan().equals("A")) {
+            gajiPokok = 5000000;
+        } else if (karyawan.getGolongan().equals("B")) {
+            gajiPokok = 4000000;
+        } else if (karyawan.getGolongan().equals("C")) {
+            gajiPokok = 3000000;
+        } else if (karyawan.getGolongan().equals("D")) {
+            gajiPokok = 2000000;
+        } else {
+            gajiPokok = 0;
+        }
         return gajiPokok;
+    }
+
+    public void setGajiPokok(double gajiPokok) {
+        this.gajiPokok = gajiPokok;
+    }
+
+    public void setTunjanganAnak(double tunjanganAnak) {
+        this.tunjanganAnak = tunjanganAnak;
+    }
+
+    public void setTunjanganIstri(double tunjanganIstri) {
+        this.tunjanganIstri = tunjanganIstri;
+    }
+
+    public void setTotalGaji(double totalGaji) {
+        this.totalGaji = totalGaji;
     }
 }

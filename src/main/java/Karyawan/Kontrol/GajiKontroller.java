@@ -25,12 +25,14 @@ public class GajiKontroller {
 
     public GajiKontroller(formGaji form) {
         this.form = form;
+
         gajiDaoImpl = new GajiDaoImpl();
         karyawanDao = new KaryawanDaoImpl();
     }
 
     public void cls() {
         form.getTxtBulan().setText("");
+        form.getCboKaryawan().setSelectedIndex(0);
         form.getTxtTahun().setText("");
     }
 

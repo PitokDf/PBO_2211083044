@@ -1,7 +1,13 @@
 package UTS_A.Model;
 
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.swing.JOptionPane;
+
+import Karyawan.Model.Karyawan;
 
 public class Warnet {
     private Pelanggan pelanggan;
@@ -9,17 +15,15 @@ public class Warnet {
     private String jamMasuk;
     private String jamKeluar;
     private double tarif;
-    private double totalBayar;
 
     public Warnet() {
     }
 
-    public Warnet(Pelanggan pelanggan, String tglMasuk, String jamMasuk, String jamKeluar, double tarif) {
+    public Warnet(Pelanggan pelanggan, String tglMasuk, String jamMasuk, String jamKeluar) {
         this.pelanggan = pelanggan;
-        TglMasuk = tglMasuk;
+        this.TglMasuk = tglMasuk;
         this.jamMasuk = jamMasuk;
         this.jamKeluar = jamKeluar;
-        this.tarif = tarif;
     }
 
     public Pelanggan getPelanggan() {
@@ -55,25 +59,41 @@ public class Warnet {
     }
 
     public double getTarif() {
-        return tarif;
-    }
-
-    public void setTarif(double tarif) {
-        LocalTime waktuAwal = LocalTime.parse(getJamMasuk(), DateTimeFormatter.ofPattern("HH:mm"));
-        LocalTime waktuPengurang = LocalTime.parse(getJamKeluar(), DateTimeFormatter.ofPattern("HH:mm"));
-        LocalTime selisih = waktuAwal.minusHours(waktuPengurang.getHour()).minusMinutes(waktuPengurang.getMinute());
-
-        // Mendapatkan nilai jam dari hasil pengurangan
-        int hasil = selisih.getHour();
-        double harga = 5000 * hasil;
-        tarif = harga;
+        return 10000 * lama();
     }
 
     public double getTotalBayar() {
-        return totalBayar;
+        if (pelanggan.getJenisPelanggan().equals("VIP")) {
+            double tb = getTarif();
+            double tbs = tb - tb * 0.02;
+            return tbs;
+        }
+        double tb = getTarif();
+        double tbs = tb - tb * 0.05;
+        return tbs;
+    }
+
+    public double lama() {
+        DateFormat format = new SimpleDateFormat("HH:mm");
+
+        try {
+            Date dateMasuk = format.parse(jamMasuk);
+            Date dateKeluar = format.parse(jamKeluar);
+            long selisihMillis = dateKeluar.getTime() - dateMasuk.getTime();
+            long selisihMenit = selisihMillis / (60 * 1000);
+            double selisihJam = Math.ceil(selisihMenit / 60.0);
+            return selisihJam;
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public void setTarif(double tarif) {
+        this.tarif = tarif;
     }
 
     public void setTotalBayar(double totalBayar) {
-        this.totalBayar = totalBayar;
+        totalBayar = tarif - (tarif * 0.02);
     }
 }
