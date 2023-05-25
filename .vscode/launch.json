@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FormWarnet",
+            "request": "launch",
+            "mainClass": "UTS_A.View.FormWarnet",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
             "name": "formGaji",
             "request": "launch",
             "mainClass": "Karyawan.View.formGaji",
