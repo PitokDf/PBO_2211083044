@@ -92,8 +92,4 @@ public class Warnet {
     public void setTarif(double tarif) {
         this.tarif = tarif;
     }
-
-    public void setTotalBayar(double totalBayar) {
-        totalBayar = tarif - (tarif * 0.02);
-    }
 }
