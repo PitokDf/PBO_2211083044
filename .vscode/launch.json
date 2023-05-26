@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Forma",
+            "request": "launch",
+            "mainClass": "Forma",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
             "name": "ComboBoxExample",
             "request": "launch",
             "mainClass": "ComboBoxExample",
