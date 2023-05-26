@@ -69,7 +69,7 @@ public class FormKaryawan extends javax.swing.JFrame {
 
                 if (selectedValue.equals("Single")) {
                         txtJumlahAnak.setEnabled(false); // Buat JTextField tidak bisa diisi
-                        txtJumlahAnak.setText(""); // Hapus isi teks jika ada
+                        txtJumlahAnak.setText("0");
                 } else {
                         txtJumlahAnak.setEnabled(true); // Aktifkan kembali JTextField
                 }

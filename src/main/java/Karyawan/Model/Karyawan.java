@@ -1,5 +1,7 @@
 package Karyawan.Model;
 
+import Karyawan.View.FormKaryawan;
+
 public class Karyawan extends Person {
     private String nip;
     private String golongan;
@@ -50,9 +52,6 @@ public class Karyawan extends Person {
     }
 
     public int getJumlahAnak() {
-        if (getStatusNikah().equals("Single")) {
-            jumlahAnak = 0;
-        }
         return jumlahAnak;
     }
 

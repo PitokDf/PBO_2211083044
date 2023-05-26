@@ -26,7 +26,7 @@ public class KaryawanKontrol {
         form.getTxtNIP().setText("");
         form.getCboStatus().setSelectedIndex(0);
         form.getTxtJabatan().setText("");
-        form.getTxtJumlahAnak().setText("");
+        form.getTxtJumlahAnak().setText("0");
     }
 
     public void saveKaryawan() {
@@ -39,6 +39,7 @@ public class KaryawanKontrol {
         karyawan.setGolongan(form.getCboGolongan().getSelectedItem().toString());
         karyawan.setJabatan(form.getTxtJabatan().getText());
         karyawan.setJumlahAnak(Integer.parseInt(form.getTxtJumlahAnak().getText()));
+
         karyawanDao.save(karyawan);
         javax.swing.JOptionPane.showMessageDialog(form, "Entri Ok");
     }
