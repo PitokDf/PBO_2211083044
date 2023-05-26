@@ -18,7 +18,6 @@ public class Gaji {
         this.karyawan = karyawan;
         this.bulan = bulan;
         this.tahun = tahun;
-        setTotalGaji();
     }
 
     public Karyawan getKaryawan() {

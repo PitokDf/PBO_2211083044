@@ -95,7 +95,7 @@ public class FormWarnet extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel4.setText("Jam Keluar");
 
-        txtJamMasuk.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
+        txtJamMasuk.setFont(new java.awt.Font("Dialog", 2, 12));  // NOI18N
 
         txtJamKeluar.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
 
