@@ -50,6 +50,9 @@ public class Karyawan extends Person {
     }
 
     public int getJumlahAnak() {
+        if (getStatusNikah().equals("Single")) {
+            jumlahAnak = 0;
+        }
         return jumlahAnak;
     }
 
