@@ -1,5 +1,7 @@
 package Karyawan.View;
 
+import java.awt.event.ActionEvent;
+
 import Karyawan.Kontrol.KaryawanKontrol;
 
 /*
@@ -20,6 +22,11 @@ public class FormKaryawan extends javax.swing.JFrame {
          */
         public FormKaryawan() {
                 initComponents();
+                cboStatus.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                cboStatusActionPerformed(evt);
+                        }
+                });
                 kontrol = new KaryawanKontrol(this);
                 kontrol.cls();
                 kontrol.tampilData();
@@ -55,6 +62,17 @@ public class FormKaryawan extends javax.swing.JFrame {
 
         public javax.swing.JTable geTblKaryawan() {
                 return tblKaryawan;
+        }
+
+        private void cboStatusActionPerformed(java.awt.event.ActionEvent evt) {
+                String selectedValue = cboStatus.getSelectedItem().toString();
+
+                if (selectedValue.equals("Single")) {
+                        txtJumlahAnak.setEnabled(false); // Buat JTextField tidak bisa diisi
+                        txtJumlahAnak.setText(""); // Hapus isi teks jika ada
+                } else {
+                        txtJumlahAnak.setEnabled(true); // Aktifkan kembali JTextField
+                }
         }
 
         /**
@@ -515,4 +533,5 @@ public class FormKaryawan extends javax.swing.JFrame {
         private javax.swing.JTextField txtNama;
         private javax.swing.JTextField txtNip;
         // End of variables declaration//GEN-END:variables
+
 }
