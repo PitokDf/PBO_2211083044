@@ -63,7 +63,7 @@ public class GajiKontroller {
         List<Gaji> list = gajiDaoImpl.getAll();
         for (Gaji gaji : list) {
             Object[] data = {
-                    gaji.getKaryawan().getNip(),
+                    gaji.getKaryawan().getNama(),
                     gaji.getBulan(),
                     gaji.getTahun(),
                     this.formatRupiah(gaji.getGajiPokok()),

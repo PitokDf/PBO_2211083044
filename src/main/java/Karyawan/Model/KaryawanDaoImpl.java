@@ -9,6 +9,7 @@ public class KaryawanDaoImpl implements KaryawanDao {
     public KaryawanDaoImpl() {
         data.add(new Karyawan("Paul Jamsok", "Jakarta", "Single", "2211203487", "B", "PNS", 0));
         data.add(new Karyawan("Pito Desri Pauzi", "Lubuk Aur", "Menikah", "2211083044", "A", "CEO", 3));
+        data.add(new Karyawan("Baghaztra", "Pekten", "Cerai", "1999099922", "A", "CEO", 3));
     }
 
     public void save(Karyawan karyawan) {

@@ -12,6 +12,7 @@ public class GajiDaoImpl implements GajiDao {
 
         data.add(new Gaji(karyawanDao.getKaryawan(0), 3, 2023));
         data.add(new Gaji(karyawanDao.getKaryawan(1), 3, 2023));
+        data.add(new Gaji(karyawanDao.getKaryawan(2), 3, 2023));
     }
 
     public void save(Gaji gaji) {

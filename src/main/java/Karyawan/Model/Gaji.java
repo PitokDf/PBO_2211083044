@@ -43,6 +43,8 @@ public class Gaji {
     public double getTunjanganAnak() {
         if (karyawan.getStatusNikah().equals("Single")) {
             tunjanganAnak = 0;
+        } else if (karyawan.getStatusNikah().equals("Cerai")) {
+            tunjanganAnak = (0.3 * gajiPokok * karyawan.getJumlahAnak());
         } else {
             tunjanganAnak = (0.2 * gajiPokok * karyawan.getJumlahAnak());
         }
@@ -51,6 +53,8 @@ public class Gaji {
 
     public double getTunjanganIstri() {
         if (karyawan.getStatusNikah().equals("Single")) {
+            tunjanganIstri = 0;
+        } else if (karyawan.getStatusNikah().equals("Cerai")) {
             tunjanganIstri = 0;
         } else {
             tunjanganIstri = (0.2 * gajiPokok);
