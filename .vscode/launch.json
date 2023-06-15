@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FormAnggotadb",
+            "request": "launch",
+            "mainClass": "PitoDesriPauzi.View.FormAnggotadb",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
             "name": "Koneksi",
             "request": "launch",
             "mainClass": "PitoDesriPauzi.DB.Koneksi",

@@ -7,9 +7,6 @@ package PitoDesriPauzi.DB;
 import java.sql.*;
 
 import javax.swing.JOptionPane;
-
-import com.mysql.cj.jdbc.MysqlDataSource;
-
 import PitoDesriPauzi.Model.*;
 
 /**
@@ -21,11 +18,11 @@ public class Koneksi {
 
     public static Connection getConnection() throws SQLException {
         if (cn == null) {
-            MysqlDataSource dataSource = new MysqlDataSource();
-            dataSource.setURL("jdbc:mysql://localhost/PBO_2211083044");
-            dataSource.setUser("root");
-            dataSource.setPassword("");
-            cn = dataSource.getConnection();
+            String databaseURL = "jdbc:mysql://localhost/PBO_2211083044";
+            String username = "root";
+            String password = "";
+            cn = DriverManager.getConnection(databaseURL, username, password);
+            System.out.println("berhasil");
         }
         return cn;
     }
@@ -34,7 +31,7 @@ public class Koneksi {
         try {
             cn = Koneksi.getConnection();
             AnggotaDao dao = new AnggotaDaoImpl(cn);
-            Anggota ag = new Anggota("0001", "Ali", "Padang", "l");
+            Anggota ag = new Anggota("0013", "Ali", "Padang", "l");
             dao.insert(ag);
             JOptionPane.showMessageDialog(null, "berhasil terkoneksi kedatabases");
         } catch (Exception e) {

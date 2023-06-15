@@ -20,4 +20,22 @@ public class AnggotaDaoImpl implements AnggotaDao {
         ps.executeUpdate();
         ps.close();
     }
+
+    public void Update(Anggota anggota) throws Exception {
+        String sql = "UPDATE anggota SET namaanggota = ?, alamat = ?, jeniskelamin = ? WHERE anggota.kodeanggota = ?";
+        PreparedStatement ps = cn.prepareStatement(sql);
+        ps.setString(1, anggota.getNamaanggota());
+        ps.setString(2, anggota.getAlamat());
+        ps.setString(3, anggota.getJeniskelamin());
+        ps.setString(4, anggota.getKodeanggota());
+        ps.executeUpdate();
+        ps.close();
+    }
+
+    public void Delete(Anggota anggota) throws Exception {
+        String sql = "DELETE FROM anggota WHERE anggota.kodeanggota = " + anggota.getKodeanggota();
+        PreparedStatement ps = cn.prepareStatement(sql);
+        ps.executeUpdate();
+        ps.close();
+    }
 }
