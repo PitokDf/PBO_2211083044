@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FormPeminjamandb",
+            "request": "launch",
+            "mainClass": "PitoDesriPauzi.View.FormPeminjamandb",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "FormBukudb",
+            "request": "launch",
+            "mainClass": "PitoDesriPauzi.View.FormBukudb",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "AnggotaDaoImpl",
+            "request": "launch",
+            "mainClass": "PitoDesriPauzi.Dao.AnggotaDaoImpl",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
             "name": "FormAnggotadb",
             "request": "launch",
             "mainClass": "PitoDesriPauzi.View.FormAnggotadb",

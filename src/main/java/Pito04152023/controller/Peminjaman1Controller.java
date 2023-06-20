@@ -25,7 +25,7 @@ public class Peminjaman1Controller {
 
     public Peminjaman1Controller() {
     }
-
+    
     public void cls() {
         form.getTxtTglpinjam().setText("");
         form.getTxtTglkembali().setText("");

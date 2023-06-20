@@ -62,7 +62,7 @@ public class BukuinController {
     }
 
     public void tampilData(){
-        DefaultTableModel tableModel = (DefaultTableModel)formBukuin.getTblBukuin().getModel();
+        DefaultTableModel tableModel = (DefaultTableModel) formBukuin.getTblBukuin().getModel();
         tableModel.setRowCount(0);
         java.util.List<Bukuin> list = bukuinDao.getAll();
         for (Bukuin bukuin : list){

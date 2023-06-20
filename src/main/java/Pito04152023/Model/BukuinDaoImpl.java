@@ -7,7 +7,7 @@ public class BukuinDaoImpl implements BukuinDao{
 
     public BukuinDaoImpl(){
         data.add(new Bukuin("7184152023", "Belajar koding", "Start", "Gelap Malam", "04-April-2023"));
-        data.add(new Bukuin("7184152023", "Belajar koding", "Start", "Gelap Malam", "04-April-2023"));
+        data.add(new Bukuin("B0003", "Belajar koding", "Start", "Gelap Malam", "04-April-2023"));
     }
 
     public void save(Bukuin bukuin){
