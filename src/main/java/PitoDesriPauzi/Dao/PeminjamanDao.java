@@ -11,7 +11,7 @@ public interface PeminjamanDao {
 
     void Delete(Peminjaman pm) throws Exception;
 
-    Peminjaman getPm(String kodeBuku) throws Exception;
+    Peminjaman getPm(String kodeBuku, String kodeanggota, String tglpinjam) throws Exception;
 
     List<Peminjaman> getAll() throws Exception;
 }
