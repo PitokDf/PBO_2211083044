@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PengembalianFormdb",
+            "request": "launch",
+            "mainClass": "PitoDesriPauzi.View.PengembalianFormdb",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
+            "name": "PengemabalianFormdb",
+            "request": "launch",
+            "mainClass": "PitoDesriPauzi.View.PengemabalianFormdb",
+            "projectName": "PBO_2211083044"
+        },
+        {
+            "type": "java",
             "name": "FormPeminjamandb",
             "request": "launch",
             "mainClass": "PitoDesriPauzi.View.FormPeminjamandb",

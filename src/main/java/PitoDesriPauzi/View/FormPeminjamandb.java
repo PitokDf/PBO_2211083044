@@ -5,7 +5,6 @@
 package PitoDesriPauzi.View;
 
 import javax.swing.JComboBox;
-import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
