@@ -78,18 +78,23 @@ public class PengembalianDaoImpl implements PengembalianDao {
         ResultSet rs = ps.executeQuery();
         List<Pengembalian> data = new ArrayList<>();
         while (rs.next()) {
-            pg = new Pengembalian();
-            pg.setKodeAgg(rs.getString(1));
-            pg.setNamaAnggota(rs.getString(2));
-            pg.setKodeBuku(rs.getString(3));
-            pg.setJudul(rs.getString(4));
-            pg.setTglpPjm(rs.getString(5));
-            pg.setTglkmbl(rs.getString(6));
-            pg.setTglDikembalikan(rs.getString(7));
-            pg.setTerlambat(rs.getInt(8));
-            pg.setDenda(rs.getDouble(9));
-            data.add(pg);
-
+            String tanggaldikembalikan = rs.getString(7);
+            if (tanggaldikembalikan == null) {
+                pg = new Pengembalian();
+                pg.setKodeAgg(rs.getString(1));
+                pg.setNamaAnggota(rs.getString(2));
+                pg.setKodeBuku(rs.getString(3));
+                pg.setJudul(rs.getString(4));
+                pg.setTglpPjm(rs.getString(5));
+                pg.setTglkmbl(rs.getString(6));
+                pg.setTglDikembalikan(rs.getString(7));
+                pg.setTerlambat(rs.getInt(8));
+                pg.setDenda(rs.getDouble(9));
+                data.add(pg);
+            } // perhatian : hilangkan kode program dibawah
+              // String tanggaldikembalikan = rs.getString(7);
+              // if (tanggaldikembalikan == null) { }
+              // jika ingin program menampilkan data, semua data yang ada.
         }
         return data;
     }
