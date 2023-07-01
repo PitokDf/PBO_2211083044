@@ -287,7 +287,8 @@ public class PengembalianFormdb extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1248, 711));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtTanggalDikembalikanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTanggalDikembalikanKeyPressed

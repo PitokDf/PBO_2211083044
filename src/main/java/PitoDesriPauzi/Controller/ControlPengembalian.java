@@ -69,11 +69,10 @@ public class ControlPengembalian {
                     .setText(tanggalPinjam);
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
             String tglDikembalikan = format.format(new java.util.Date());
-
+            form.getTxtTanggalDikembalikan().setText(tglDikembalikan);
             int terlambat = dao.terlmbat(tglDikembalikan, tanggalkembali);
             pg.setTerlambat(terlambat);
             form.getTxtTerlambat().setText("" + terlambat);
-            form.getTxtTanggalDikembalikan().setText(tglDikembalikan);
             form.getTxtDenda().setText((String.valueOf(pg.getDenda())));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(form, e, null, 0);
