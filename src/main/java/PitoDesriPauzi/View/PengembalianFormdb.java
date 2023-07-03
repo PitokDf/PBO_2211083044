@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
@@ -100,6 +101,7 @@ public class PengembalianFormdb extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblPengembalian = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
+        btnExit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -199,6 +201,13 @@ public class PengembalianFormdb extends javax.swing.JFrame {
 
         jLabel7.setText("Cari berdasarkan Kode Anggota");
 
+        btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -215,6 +224,8 @@ public class PengembalianFormdb extends javax.swing.JFrame {
                         .addComponent(btnHapus)
                         .addGap(18, 18, 18)
                         .addComponent(btnCancel)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnExit)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -275,7 +286,8 @@ public class PengembalianFormdb extends javax.swing.JFrame {
                             .addComponent(btnKembalikan)
                             .addComponent(btnUbah)
                             .addComponent(btnHapus)
-                            .addComponent(btnCancel)))
+                            .addComponent(btnCancel)
+                            .addComponent(btnExit)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -299,6 +311,13 @@ public class PengembalianFormdb extends javax.swing.JFrame {
         //     e.printStackTrace();
         // }
     }//GEN-LAST:event_txtTanggalDikembalikanKeyPressed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        int i = JOptionPane.showConfirmDialog(rootPane, "Anda yakin Ingin Keluar", "confirm", JOptionPane.YES_NO_OPTION);
+        if (i==0){
+            this.dispose();
+        }
+    }//GEN-LAST:event_btnExitActionPerformed
 
     private void tblPengembalianMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_tblPengembalianMouseClicked
         ctrl.getPengemballian();
@@ -395,6 +414,7 @@ public class PengembalianFormdb extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bntCari;
     private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnExit;
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnKembalikan;
     private javax.swing.JButton btnUbah;
