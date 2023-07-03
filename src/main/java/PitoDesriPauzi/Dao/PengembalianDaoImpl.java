@@ -78,8 +78,8 @@ public class PengembalianDaoImpl implements PengembalianDao {
         ResultSet rs = ps.executeQuery();
         List<Pengembalian> data = new ArrayList<>();
         while (rs.next()) {
-            String tanggaldikembalikan = rs.getString(7);
-            if (tanggaldikembalikan == null) {
+            // String tanggaldikembalikan = rs.getString(7);
+            // if (tanggaldikembalikan == null) {
                 pg = new Pengembalian();
                 pg.setKodeAgg(rs.getString(1));
                 pg.setNamaAnggota(rs.getString(2));
@@ -91,7 +91,7 @@ public class PengembalianDaoImpl implements PengembalianDao {
                 pg.setTerlambat(rs.getInt(8));
                 pg.setDenda(rs.getDouble(9));
                 data.add(pg);
-            } // perhatian : hilangkan kode program dibawah
+            // } // perhatian : hilangkan kode program dibawah
               // String tanggaldikembalikan = rs.getString(7);
               // if (tanggaldikembalikan == null) { }
               // jika ingin program menampilkan data, semua data yang ada.

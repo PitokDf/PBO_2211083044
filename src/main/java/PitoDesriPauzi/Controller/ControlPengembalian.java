@@ -167,6 +167,9 @@ public class ControlPengembalian {
         String tanggalkembali = form.getTblPengembalian().getValueAt(form.getTblPengembalian().getSelectedRow(), 5)
                 .toString();
         int terlambat = dao.terlmbat(tglDikembalikan, tanggalkembali);
+        if (terlambat <= 0) {
+            terlambat = 0;
+        }
         form.getTxtTerlambat().setText("" + terlambat);
         form.getTxtTanggalDikembalikan().setText(tglDikembalikan);
         form.getTxtDenda().setText((String.valueOf(terlambat * 1000)));
