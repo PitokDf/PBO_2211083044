@@ -118,7 +118,13 @@ public class ControlPengembalian {
             }
             List<Pengembalian> List = dao.cari(kode, cari);
             if (List.isEmpty()) {
-                JOptionPane.showMessageDialog(form, "Kode '" + cari + "' Tidak dapat ditemukan");
+                if (kode == "anggota.kodeAnggota") {
+                    JOptionPane.showMessageDialog(form, "Kode Anggota '" + cari + "' Tidak dapat ditemukan");
+                } else if (kode == "daftarBuku.kodeBuku") {
+                    JOptionPane.showMessageDialog(form, "Kode Buku '" + cari + "' Tidak dapat ditemukan");
+                } else {
+                    JOptionPane.showMessageDialog(form, "Nama '" + cari + "' Tidak dapat ditemukan");
+                }
             } else {
                 for (Pengembalian pm : List) {
                     Object[] data = {
