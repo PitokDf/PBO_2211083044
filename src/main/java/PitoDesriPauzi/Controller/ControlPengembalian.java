@@ -31,6 +31,8 @@ public class ControlPengembalian {
 
     public void Clear() {
         try {
+            form.getTxtDenda().setEditable(false);
+            form.getTxtTerlambat().setEditable(false);
             form.getBtnKembalikan().setEnabled(false);
             List<Buku> bukuD = daoBuku.getAll();
             List<Anggota> aggD = daoAgg.getAll();
