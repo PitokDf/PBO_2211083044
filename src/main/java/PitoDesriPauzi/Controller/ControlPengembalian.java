@@ -105,12 +105,18 @@ public class ControlPengembalian {
 
     public void Cari() {
         try {
-            String kode = form.getTxtCari().getText();
+            String kode = form.getCboCari().getSelectedItem().toString();
+            String cari = form.getTxtCari().getText();
             DefaultTableModel tableModel = (DefaultTableModel) form.getTblPengembalian().getModel();
             tableModel.setRowCount(0);
-            List<Pengembalian> List = dao.cari(kode);
+            if (kode == "kodeAnggota") {
+                kode = "anggota." + kode;
+            } else {
+                kode = "daftarBuku." + kode;
+            }
+            List<Pengembalian> List = dao.cari(kode, cari);
             if (List.isEmpty()) {
-                JOptionPane.showMessageDialog(form, "Kode Anggota '" + kode + "' Tidak dapat ditemukan");
+                JOptionPane.showMessageDialog(form, "Kode '" + cari + "' Tidak dapat ditemukan");
             } else {
                 for (Pengembalian pm : List) {
                     Object[] data = {
@@ -143,7 +149,7 @@ public class ControlPengembalian {
             dao.Insert(pg);
             JOptionPane.showMessageDialog(form, "Berhasil Mengembalikan Buku.");
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(form, "Tidak dapat melakukan pengembalian!", null, 0);
+            JOptionPane.showMessageDialog(form, "Buku telah dikembalikan!", null, 0);
         }
     }
 

@@ -69,6 +69,10 @@ public class PengembalianFormdb extends javax.swing.JFrame {
         return btnKembalikan;
     }
 
+    public JComboBox<String> getCboCari() {
+        return cboCari;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -102,6 +106,7 @@ public class PengembalianFormdb extends javax.swing.JFrame {
         tblPengembalian = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
         btnExit = new javax.swing.JButton();
+        cboCari = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -208,6 +213,8 @@ public class PengembalianFormdb extends javax.swing.JFrame {
             }
         });
 
+        cboCari.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "kodeBuku", "kodeAnggota" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -244,6 +251,8 @@ public class PengembalianFormdb extends javax.swing.JFrame {
                             .addComponent(txtTerlambat)
                             .addComponent(txtDenda))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cboCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -293,7 +302,8 @@ public class PengembalianFormdb extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bntCari))))
+                            .addComponent(bntCari)
+                            .addComponent(cboCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -418,6 +428,7 @@ public class PengembalianFormdb extends javax.swing.JFrame {
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnKembalikan;
     private javax.swing.JButton btnUbah;
+    private javax.swing.JComboBox<String> cboCari;
     private javax.swing.JComboBox<String> cboKodeAgg;
     private javax.swing.JComboBox<String> cboKodeBuku;
     private javax.swing.JLabel jLabel1;

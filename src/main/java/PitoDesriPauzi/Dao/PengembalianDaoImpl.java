@@ -80,21 +80,21 @@ public class PengembalianDaoImpl implements PengembalianDao {
         while (rs.next()) {
             // String tanggaldikembalikan = rs.getString(7);
             // if (tanggaldikembalikan == null) {
-                pg = new Pengembalian();
-                pg.setKodeAgg(rs.getString(1));
-                pg.setNamaAnggota(rs.getString(2));
-                pg.setKodeBuku(rs.getString(3));
-                pg.setJudul(rs.getString(4));
-                pg.setTglpPjm(rs.getString(5));
-                pg.setTglkmbl(rs.getString(6));
-                pg.setTglDikembalikan(rs.getString(7));
-                pg.setTerlambat(rs.getInt(8));
-                pg.setDenda(rs.getDouble(9));
-                data.add(pg);
+            pg = new Pengembalian();
+            pg.setKodeAgg(rs.getString(1));
+            pg.setNamaAnggota(rs.getString(2));
+            pg.setKodeBuku(rs.getString(3));
+            pg.setJudul(rs.getString(4));
+            pg.setTglpPjm(rs.getString(5));
+            pg.setTglkmbl(rs.getString(6));
+            pg.setTglDikembalikan(rs.getString(7));
+            pg.setTerlambat(rs.getInt(8));
+            pg.setDenda(rs.getDouble(9));
+            data.add(pg);
             // } // perhatian : hilangkan kode program dibawah
-              // String tanggaldikembalikan = rs.getString(7);
-              // if (tanggaldikembalikan == null) { }
-              // jika ingin program menampilkan data, semua data yang ada.
+            // String tanggaldikembalikan = rs.getString(7);
+            // if (tanggaldikembalikan == null) { }
+            // jika ingin program menampilkan data, semua data yang ada.
         }
         return data;
     }
@@ -113,10 +113,11 @@ public class PengembalianDaoImpl implements PengembalianDao {
     }
 
     @Override
-    public List<Pengembalian> cari(String kode) throws Exception {
-        String cari = "SELECT anggota.kodeAnggota, anggota.namaAnggota, daftarBuku.kodeBuku, daftarBuku.judulBuku, Peminjaman.tanggalPinjam, Peminjaman.tanggalKembali, pengembalian.tanggalKembalikan, pengembalian.terlambat, pengembalian.denda FROM Peminjaman JOIN anggota ON Peminjaman.kodeAnggota = anggota.kodeAnggota JOIN daftarBuku ON Peminjaman.kodeBuku = daftarBuku.kodeBuku LEFT JOIN pengembalian ON (Peminjaman.kodeAnggota = pengembalian.KodeAnggota AND Peminjaman.kodeBuku = pengembalian.kodeBuku AND CAST(Peminjaman.tanggalPinjam AS DATE) = CAST(pengembalian.tanggalPinjam AS DATE)) WHERE anggota.kodeAnggota = ?";
-        PreparedStatement ps = cn.prepareStatement(cari);
-        ps.setString(1, kode);
+    public List<Pengembalian> cari(String kode, String cari) throws Exception {
+        String search = "SELECT anggota.kodeAnggota, anggota.namaAnggota, daftarBuku.kodeBuku, daftarBuku.judulBuku, Peminjaman.tanggalPinjam, Peminjaman.tanggalKembali, pengembalian.tanggalKembalikan, pengembalian.terlambat, pengembalian.denda FROM Peminjaman JOIN anggota ON Peminjaman.kodeAnggota = anggota.kodeAnggota JOIN daftarBuku ON Peminjaman.kodeBuku = daftarBuku.kodeBuku LEFT JOIN pengembalian ON (Peminjaman.kodeAnggota = pengembalian.KodeAnggota AND Peminjaman.kodeBuku = pengembalian.kodeBuku AND CAST(Peminjaman.tanggalPinjam AS DATE) = CAST(pengembalian.tanggalPinjam AS DATE)) WHERE "+kode+" LIKE '%"+cari+"%'";
+        PreparedStatement ps = cn.prepareStatement(search);
+        // ps.setString(1, kode);
+        // ps.setString(2, cari);
         ResultSet rs = ps.executeQuery();
         List<Pengembalian> data = new ArrayList<>();
         while (rs.next()) {
