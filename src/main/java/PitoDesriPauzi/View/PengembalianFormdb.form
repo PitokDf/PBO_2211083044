@@ -352,7 +352,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnExit">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Exit"/>
+        <Property name="text" type="java.lang.String" value="Pinjam"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExitActionPerformed"/>
@@ -361,9 +361,10 @@
     <Component class="javax.swing.JComboBox" name="cboCari">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="2">
-            <StringItem index="0" value="kodeBuku"/>
-            <StringItem index="1" value="kodeAnggota"/>
+          <StringArray count="3">
+            <StringItem index="0" value="Kode Buku"/>
+            <StringItem index="1" value="Kode Anggota"/>
+            <StringItem index="2" value="Nama"/>
           </StringArray>
         </Property>
       </Properties>

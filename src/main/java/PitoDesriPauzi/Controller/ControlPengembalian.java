@@ -109,10 +109,12 @@ public class ControlPengembalian {
             String cari = form.getTxtCari().getText();
             DefaultTableModel tableModel = (DefaultTableModel) form.getTblPengembalian().getModel();
             tableModel.setRowCount(0);
-            if (kode == "kodeAnggota") {
-                kode = "anggota." + kode;
+            if (kode == "Kode Anggota") {
+                kode = "anggota.kodeAnggota";
+            } else if (kode == "Kode Buku") {
+                kode = "daftarBuku.kodeBuku";
             } else {
-                kode = "daftarBuku." + kode;
+                kode = "anggota.namaAnggota";
             }
             List<Pengembalian> List = dao.cari(kode, cari);
             if (List.isEmpty()) {

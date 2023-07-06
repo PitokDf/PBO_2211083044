@@ -8,6 +8,8 @@ import PitoDesriPauzi.Controller.ControlPengembalian;
 import PitoDesriPauzi.DB.Koneksi;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
@@ -206,14 +208,14 @@ public class PengembalianFormdb extends javax.swing.JFrame {
 
         jLabel7.setText("Cari berdasarkan Kode Anggota");
 
-        btnExit.setText("Exit");
+        btnExit.setText("Pinjam");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitActionPerformed(evt);
             }
         });
 
-        cboCari.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "kodeBuku", "kodeAnggota" }));
+        cboCari.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kode Buku", "Kode Anggota", "Nama" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -323,9 +325,15 @@ public class PengembalianFormdb extends javax.swing.JFrame {
     }//GEN-LAST:event_txtTanggalDikembalikanKeyPressed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        int i = JOptionPane.showConfirmDialog(rootPane, "Anda yakin Ingin Keluar", "confirm", JOptionPane.YES_NO_OPTION);
+        int i = JOptionPane.showConfirmDialog(rootPane, "Ingin melakukan peminjaman baru?", "confirm", JOptionPane.YES_NO_OPTION);
         if (i==0){
-            this.dispose();
+            try {
+                FormPeminjamandb pm = new FormPeminjamandb();
+                pm.setVisible(true);
+                this.dispose();
+            } catch (Exception ex) {
+                Logger.getLogger(PengembalianFormdb.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_btnExitActionPerformed
 
